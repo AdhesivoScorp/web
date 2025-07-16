@@ -212,105 +212,25 @@
   </div>
 </nav>
 
-<!-- Slider con espacio reducido -->
+<!-- Imagen fija como portada -->
 <div style="width: 100%; padding: 0; background: white; margin: 0;">
-  <div class="slider-container" style="
-      width: 100%;
-      max-width: 1200px;
-      height: 350px;  <!-- Altura reducida -->
-      margin: 0 auto;
-      position: relative;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  <div style="
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+ background-image: url('portada01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.08);
   ">
-
-
- 
-    <div class="slider" style="
-        display: flex;
-        width: 300%;
-        height: 100%;
-        animation: slide 15s infinite;
-    ">
-      <!-- Imagen 1 - Centrada -->
-      <div class="slide" style="
-          width: 8%;
-          height: 100%;
-          background-image: url('fondovi.jpg');
-          background-size: cover;
-          background-position: center;
-          flex-shrink: 0;
-      "></div>
-      
-      <!-- Imagen 2 - Centrada -->
-      <div class="slide" style="
-          width: 8%;
-          height: 100%;
-          background-image: url('ducto.jpg');
-          background-size: cover;
-          background-position: center;
-          flex-shrink: 0;
-      "></div>
-
-      <!-- Imagen 3 - Centrada -->
-      <div class="slide" style="
-          width: 8%;
-          height: 100%;
-          background-image: url('empapor.jpg');
-          background-size: cover;
-          background-position: center;
-          flex-shrink: 0;
-      "></div>
-      
-      <!-- Imagen 4 - Centrada -->
-      <div class="slide" style="
-          width: 8%;
-          height: 100%;
-          background-image: url('KINEO2.jpg');
-          background-size: cover;
-          background-position: center;
-          flex-shrink: 0;
-      "></div>
-    </div>
   </div>
 </div>
 
-<style>
-  @keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-33.33%); }
-    66% { transform: translateX(-66.66%); }
-    100% { transform: translateX(0); }
-  }
-
-  /* Corrección para el desplazamiento */
-  .slider {
-    transform: translateX(0);
-  }
-  
-  /* Asegurar que las imágenes no se compriman */
-  .slide {
-    flex: 0 0 25%;
-  }
-
-  /* Responsive para móviles */
-  @media (max-width: 768px) {
-    .slider-container {
-      height: 250px;
-    }
-    .slide {
-      flex: 0 0 100%;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-100%); }
-      100% { transform: translateX(-200%); }
-    }
-  }
-</style></div>
-
 <!-- Sección Nosotros -->
-<section id="nosotros" style="padding: 5px 5px 5px; background-color: #f8f9fa;">
+<section id="nosotros" style="padding: 1px 1px 1px; background-color: #f8f9fa;">
 
   <!-- Contenido de la sección Nosotros -->
 </section>
@@ -967,157 +887,46 @@ document.addEventListener("DOMContentLoaded", () => {
     <div id="detallesContenido"></div>
   </div>
 </div>
-
-<!-- Sección de Catálogos -->
-<section class="catalog-section">
-  <h2 class="catalog-title">Descarga Nuestros Catálogos</h2>
-  <div class="catalog-buttons">
-    <!-- Botón Curación - Deportivo -->
-    <div class="dropdown">
-      <button class="dropbtn">Curación - Deportivo</button>
-      <div class="dropdown-content">
-        <a href="catalogo-curacion-deportivo-menudeo.pdf" download>Menudeo</a>
-        <a href="Catalogo-depor-medi-mayoreo.pdf" download>Mayoreo</a>
-        <a href="catalogo-curacion-deportivo-distribuidor.pdf" download>Distribuidor</a>
-      </div>
-    </div>
-    <!-- Botón Industria - Ferretería -->
-    <div class="dropdown">
-      <button class="dropbtn">Industria - Ferretería</button>
-      <div class="dropdown-content">
-        <a href="catalogo-Industria-ferreteria-minorista.pdf" download>Menudeo</a>
-        <a href="catalogo-Industria-ferreteria-mayorista.pdf" download>Mayoreo</a>
-        <a href="catalogo-Industria-ferreteria-distribuidor.pdf" download>Distribuidor</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Estilos CSS -->
-<style>
-.catalog-section {
-  background-color: #f5f5f5;
-  padding: 0px 0px 100px 0px; /* menos arriba, más abajo */
-  text-align: center;
-  margin-top: -40px; /* reduce el espacio desde la sección anterior */
-}
-.catalog-title {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #333;
-}
-.catalog-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropbtn {
-  background-color: #d90000;
-  color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.dropbtn:hover {
-  background-color: #b30000;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1;
-  margin-top: 10px;
-}
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-bottom: 1px solid #ddd;
-}
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-    @media (max-width: 600px) {
-      .contacto div, .catalog-buttons, .product, .section, header, nav, .products {
-        flex-direction: column !important;
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      img, video {
-        max-width: 100% !important;
-        height: auto !important;
-      }
-    
-  .catalog-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/* Mejora separación entre secciones */
-.contacto {
-  margin-top: 50px;
-}
-</style>
-
 <!-- Sección de contacto -->
-<section class="contacto" style="font-family: Arial, sans-serif; padding: 20px; max-width: 100%; margin: auto;">
-  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px;">
-    
+<section class="contacto" style="font-family: Arial, sans-serif; padding: 20px 20px 80px; background-color: #f5f5f5;">
+  <div style="max-width: 1200px; margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 60px;">
+
     <!-- Bloque izquierdo -->
-    <div style="flex: 1 1 350px; margin-left: 0;">
-      <img src="oficinas.jpg" alt="Edificio Adhesivo'S" style="width: 100%; border-radius: 8px; height: 220px; object-fit: cover;">
-      <div style="margin-top: 15px;">
-        <p style="font-size: 20px; line-height: 1.5; margin-bottom: 25px;">
-          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Google Maps" style="width: 32px; vertical-align: middle; margin-right: 8px;">
-          <a href="https://maps.google.com/?q=Av.+Dr.+Gustavo+Baz+Prada+Mz+001,+Tlalnepantla,+Mexico" target="_blank" style="text-decoration: none; color: #000; font-weight: 500;">
-            <strong>Av. Dr. Gustavo Baz Prada Mz 001</strong><br>
-            <strong>Col. La loma C.P 54060 Tlalnepantla, México</strong>
+    <div style="flex: 1 1 480px;">
+      <img src="oficinas.jpg" alt="Edificio Adhesivo'S" style="width: 100%; border-radius: 60px; height: 260px; object-fit: cover;">
+      <div style="margin-top: 60px;">
+        <p style="font-size: 22px; line-height: 1.6; margin-bottom: 25px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Google Maps" style="width: 34px; vertical-align: middle; margin-right: 10px;">
+          <a href="https://maps.google.com/?q=Av.+Dr.+Gustavo+Baz+Prada+Mz+001,+Tlalnepantla,+Mexico" target="_blank" style="text-decoration: none; color: #000; font-weight: 600;">
+            <strong>Av. Dr. Gustavo Baz Prada 309</strong><br>
+            <strong>Col. La Loma C.P. 54060 Tlalnepantla.</strong>
           </a>
         </p>
-        <a href="aviso-de-privacidad.pdf" download style="font-size: 18px; text-decoration: none; color: #007BFF; font-weight: 500; display: inline-block; margin-top: 10px;">
+        <a href="aviso-de-privacidad.pdf" download style="font-size: 18px; text-decoration: none; color: #007BFF; font-weight: 500;">
           📄 Descargar Aviso de Privacidad
         </a>
       </div>
     </div>
 
     <!-- Bloque derecho -->
-    <div style="flex: 1 1 280px; margin-left: 0;">
-      <h2 style="font-size: 30px; color: #000; margin-bottom: 25px;">Contacta con nosotros:</h2>
-      <div class="contact-box" style="display: grid; gap: 15px;">
-        <a href="tel:+525576808936" style="display: flex; align-items: center; text-decoration: none; color: #000;">
-          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" style="width: 28px; margin-right: 12px;">
-          <span style="font-size: 18px;">Llamar al 55-7680-8936</span>
+    <div style="flex: 1 1 500px; margin-left: 160px;"> <!-- 👈 desplazamiento hacia la derecha -->
+      <h2 style="font-size: 32px; color: #000; margin-bottom: 30px;">Contacta con nosotros:</h2>
+      <div class="contact-box" style="display: grid; gap: 20px;">
+        <a href="tel:+525576808936" style="display: flex; align-items: center; text-decoration: none; color: #000; border: 3px solid #002F6C; border-radius: 10px; padding: 14px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" style="width: 30px; margin-right: 14px;">
+          <span style="font-size: 20px;">Llamar al 55-7680-8936</span>
         </a>
-        <a href="https://wa.me/525519025655" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: #000;">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width: 28px; margin-right: 12px;">
-          <span style="font-size: 18px;">WhatsApp 55-1902-5655</span>
+        <a href="https://wa.me/525519025655" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: #000; border: 3px solid #002F6C; border-radius: 10px; padding: 14px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width: 30px; margin-right: 14px;">
+          <span style="font-size: 20px;">WhatsApp 55-1902-5655</span>
         </a>
-        <a href="mailto:AdhesivoScorp@outlook.com" style="display: flex; align-items: center; text-decoration: none; color: #000;">
-          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" style="width: 28px; margin-right: 12px;">
-          <span style="font-size: 18px;">Enviar Correo Electrónico</span>
+        <a href="mailto:AdhesivoScorp@outlook.com" style="display: flex; align-items: center; text-decoration: none; color: #000; border: 3px solid #002F6C; border-radius: 10px; padding: 14px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" style="width: 30px; margin-right: 14px;">
+          <span style="font-size: 20px;">Enviar Correo Electrónico</span>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=100083484102582" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: #000;">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" style="width: 28px; margin-right: 12px;">
-          <span style="font-size: 18px;">Facebook Adhesivo'S</span>
+        <a href="https://www.facebook.com/profile.php?id=100083484102582" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: #000; border: 3px solid #002F6C; border-radius: 10px; padding: 14px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" style="width: 30px; margin-right: 14px;">
+          <span style="font-size: 20px;">Facebook Adhesivo'S</span>
         </a>
       </div>
     </div>
